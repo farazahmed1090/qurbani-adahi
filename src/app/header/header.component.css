@@ -1,0 +1,238 @@
+@import url(./header.scss);
+
+
+li{
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+  
+  #ul{
+     z-index: 1;
+  }
+  
+  
+  .r{
+    background-color: red;
+  }
+  
+  .g{
+    background-color: green;
+  }
+  
+  .y{
+    background-color: yellow;
+  }
+  
+  li:hover{
+    cursor: pointer;
+  }
+  
+  #card-list-2 span{
+  font-size: 13px;}
+  
+  #card-list-toggle span{
+    font-size: 12px;
+  }
+  
+  #card-list-toggle .icon{
+    padding-top: 2px;
+     font-size: 15px; 
+     font-weight: 600;
+      color: #fd8550;
+  }
+  
+  #card-list-2 .icon{
+    padding-top: 2px;
+     font-size: 15px; 
+     font-weight: 600;
+      color: #fd8550;
+  }
+  
+  #card-list-2 li{
+    margin-top: 10px;
+  }
+  
+  
+  
+  .card-div{
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+    box-shadow:   4px 3px 10px rgb(0 0 0 / 0.2);
+  }
+  
+  
+  
+  a{
+     color:black
+  }
+  #navbarNav li {
+     border-bottom: 1px solid #e5e5e9;
+     margin-bottom: 5px;
+  }
+  
+  
+  
+  .mul15{
+     position: absolute;
+     top: 50%;
+     left: 43%;
+     background-size: 100%;
+  }
+  
+  .mul15 {
+     height: 14px;
+     width: 144px;
+  }
+     
+  .m15c {
+     height: 14px;
+     width: 14px;
+     margin: 0 2px;
+     border-radius: 50%;
+     float: left;
+     background-color: #F4D03F;
+  }
+     
+  .m15c1, .m15c2,
+  .m15c3, .m15c4,
+  .m15c5, .m15c6,
+  .m15c7, .m15c8 {
+     -webkit-animation: m15anim 2s infinite ease-in-out;
+     animation: m15anim 2s infinite ease-in-out;
+  }
+     
+  .m15c2 { -webkit-animation-delay: .25s; animation-delay: .25s }
+     
+  .m15c3 { -webkit-animation-delay: .5s; animation-delay: .5s }
+     
+  .m15c4 { -webkit-animation-delay: .75s; animation-delay: .75s }
+     
+  .m15c5 { -webkit-animation-delay: 1s; animation-delay: 1s } 
+    
+  .m15c6 { -webkit-animation-delay: 1.25s; animation-delay: 1.25s }
+     
+  .m15c7 { -webkit-animation-delay: 1.5s; animation-delay: 1.5s }
+     
+  .m15c8 { -webkit-animation-delay: 1.75s; animation-delay: 1.75s }
+     
+  @-webkit-keyframes m15anim {
+     0%, 40%, 100% {
+        background-color: #F4D03F;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+     }
+     20% {
+        background-color: #C0392B;
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+     }
+  }
+     
+  @keyframes m15anim {
+     0%, 40%, 100% {
+        background-color: #F4D03F;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+     }
+     20% {
+        background-color: #C0392B;
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+     }
+  }
+  
+  .card-heading{
+    font-size: 12px;
+    font-weight: 700;
+    color: #1d1d1d;
+    text-transform: uppercase;
+  }
+  
+  .card-heading-toggle{
+    font-size: 10px;
+    font-weight: 600;
+    color: #1d1d1d;
+    text-transform: uppercase;
+  }
+  
+      @media (max-width: 2000px) and (min-width: 992px){
+       #HideandShow{
+          display: block;
+         }
+      }
+  
+      @media (max-width:992px){
+       #HideandShow {
+          display: none !important;
+       }
+      }
+  
+    
+  @media (max-width:767px){
+    .div{
+       margin-left: 40%;
+    }
+  }
+  
+  @media (max-width:576px){
+    .div{
+       margin-left: 0%;
+       padding-bottom: 15px;
+    }
+  
+    .pera{
+       display: none;
+    }
+  
+    .card-list-toggle{
+       padding-bottom: 0px !important;
+    }
+  
+    .card-heading-toggle{
+       font-size: 14px;
+       font-weight: 500;
+    }
+  
+    .llc{
+       font-size: 14px !important;
+       font-weight: 700;
+       
+    }
+  
+    .list-items{
+       text-align: start;
+       padding-top: 10px;
+    }
+  
+    .row-items{
+       box-shadow:   4px 3px 15px rgb(0 0 0 / 0.2);
+       border-bottom-left-radius:10px ;
+       border-bottom-right-radius:10px ;
+       border-top-left-radius: 10px;
+       border-top-right-radius: 10px;
+    }
+  
+    .column-heading{
+       margin-top: 12px;
+    }
+  
+    #card-list-toggle  li {
+       box-shadow:   4px 3px 15px rgb(0 0 0 / 0.2);
+       border-bottom-left-radius:5px ;
+       border-bottom-right-radius:5px ;
+       border-top-left-radius: 5px;
+       border-top-right-radius: 5px;
+       padding: 10px 5px;
+    }
+  
+    .firstdiv {
+       margin-top: 10px;
+       }
+  
+    .card-div{
+      
+       box-shadow:   none
+     }
+  
+  }

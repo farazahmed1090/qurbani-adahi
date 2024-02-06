@@ -1,0 +1,109 @@
+<app-header></app-header>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+
+    <div class="main_div">
+        
+        <div class=" row  m-0 p-0 justify-content-center">
+            <div class="col-12  row justify-content-center">
+                <div class=" search row col-lg-6 justify-content-center align-items-center">
+
+                    <div>
+                        <div class="search-2"> <i class='bx bx-search-alt'></i> 
+                            <form action="" [formGroup]="SearchBar" (keyup)="onKeyUp()">
+                            <input type="text" 
+                                placeholder="Search Job Here..." formControlName="searchJob">
+                            <button (click)="onKeyUp()">Search</button></form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div *ngIf="notAvailable" class="d-flex align-items-center justify-content-center" style="color: red; margin-top: 5%; font-size: 18px;" >
+           Sorry there is no job match with your search. 
+        </div>
+
+        <div *ngIf="!notAvailable" class="row col-12 justify-content-between  findJobsMain " >
+   
+            <div class="row col-12 justify-content-between  findJobsMain " style="padding-left: 5% " >
+
+                <div class="cardSection  justify-content-start row  "[ngClass]="detailsection ? 'col-lg-8 col-md-6 col-sm-12  ' : 'col-12'" >
+                    <div  class="container   row me-1 " [ngClass]="detailsection ? 'col-lg-6 col-md-12 col-sm-12' : 'col-lg-4 col-md-6'" (click)="submit(a.tbl_job_id);" *ngFor="let a of allJobs">
+                        <div class="card mx-auto">
+                            <div class="card-title">
+                                <p class="heading">{{a.job_title}}&nbsp;</p>
+                            </div>
+                            <p class="text-muted">'{{a.job_description | slice:0:100}}'</p>
+                            <div class="row  m-0 p-0 btnrow  ">
+                                <div class="p-0" style="width: 26%; "><button type="button"
+                                    class="btn btn-outline-primary btn-sm"
+                                    style="background: #007bff33; pointer-events: none;">{{a.job_type}}
+                                </button></div>
+                                <div class="p-0" style="width: 36%;"><button type="button"
+                                        class="btn btn-outline-success btn-sm"
+                                        style="background: #00ff002b; pointer-events: none;">Salary:&nbsp;{{a.min_salary
+                                        }}</button></div>
+                                        <div class="p-0" style="width: 33%;"><button type="button"
+                                            class="btn btn-outline-primary btn-sm"
+                                            style="background: #007bff33; pointer-events: none;">Positions:&nbsp;{{a.required_candidates}}
+                                        </button></div>
+    
+                            </div>
+    
+                            <!-- <div class="mutual">&nbsp;&nbsp;<span>Total Vacancies
+                                    {{a.required_candidates}}</span></div> -->
+                            <div class="row btnsubmit mt-4 mb-2 ">
+                                <div class="col-md-6 col-6">
+                                    <button type="button" class="btn btn-primary btn-lg" (click)="submit(a.tbl_job_id)"><span>Apply Now</span></button>
+                                </div>
+                               
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+                   
+    
+                </div>
+    
+                <div class="jobdetails  " [ngClass]="detailsection ? 'col-lg-4 col-md-6 col-sm-12  '  : 'd-none'"
+                 >
+                 
+                    <div class="head" >
+                        <div class="headinghead d-flex justify-content-between align-items-start"><h3>{{jobTitle}}</h3><span class="material-icons " style="cursor: pointer ; color:black;" (click)="csubmit()" >close</span></div>
+                      <span style="font-size: 14px;"><span style="font-weight: bold; ">Salary:&nbsp;</span>{{minSalary}}Rs&nbsp;</span>-<span style="font-size: 14px;">&nbsp;{{maxSalary}}Rs</span><br>
+                      <span style="font-size: 14px;"> <span style="font-weight: 500;">Deadline:&nbsp;</span>{{deadline}}</span>
+                        <button  class="btna firsta" (click)="confirm_apply_now()">Apply Now</button>
+                        
+    
+                    </div>
+                    
+                    <div class="details">
+                        <h3>Job Details</h3> 
+                       <p> <span style="font-weight: bold;">Experience Required:&nbsp;</span>{{experienceReq}}</p>
+                       
+                        <h3>Job Type</h3>
+                        <p style="font-weight: bold;">{{jobType}}</p> 
+                        
+    
+                    </div>
+                    <div class="FullDescription">
+                        <h3>Full Job Description</h3>
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="lastSec text-end">
+                        <span style="font-weight: bold;">Posted On:&nbsp;</span> {{datePosted}}
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+    
+           <app-quick-link></app-quick-link>
+        </div>
+
+
+    </div>
+</body>

@@ -1,0 +1,291 @@
+.main_div{
+    /* background-color:#FECD45; */
+    padding-bottom: 3%;
+}
+.background_img{
+    /* background-image: url(../..assets/images/office-skyscrapers-business-district.jpg); */
+    background-color: #000;
+    height: 500px ;
+    width: 100%;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+  
+
+}
+.card{
+  box-shadow: 0px 0px 20px lightgray;
+  padding-bottom: 10px;
+}
+
+.contact_form{
+    background-color: white;
+    
+}
+.interest{
+    background-color: #2568FB;
+    color: white;
+    border: 1px solid gray;
+    padding: 3px;
+    margin-right: 3px;
+    margin-top: 10px;
+    align-content: flex-end;
+   
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+  .upload .material-icons{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    z-index: 100;
+    color: #FECD45;
+    font-size: 30px;
+  }
+  @media (max-width:990px) {
+    .upload .material-icons{
+      /* color: black !important; */
+      position: absolute;
+      top: 37%;
+      left:48%;
+    }
+  }
+  .img_div{
+    height: 75px;
+    width: 100%;
+    /* position: absolute;
+    top: 7%;
+    left: 25%; */
+    z-index: 0;
+    
+  }
+  .upload {
+    color: #2568FB;
+    padding: 5px 5px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px dashed #2568FB;
+
+    cursor: pointer;
+    height: 82px;
+
+}
+
+.heading{
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  color: #2568FB;
+}
+
+  .btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border: 2px solid transparent ;
+    border-radius: 0.6em;
+    color: #fff;
+    background-color: #2568FB;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 15px 29px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  .btn:hover {
+    color:#2568FB;
+    border: 2px solid #2568FB;
+    outline: 0;
+  }
+  .first {
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  .first:hover {
+    box-shadow: 0 0 40px 40px white inset;
+  }
+  .contact_cards{
+    background-color: #2568FB ;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 11px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-height: 120px;
+  }
+  .card_2{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+  }
+  .heading_1{
+    font-size: 26px !important;
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+.card-1 {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+    margin-bottom: 20px;
+}
+
+.card-1 .face {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    background-color: #2568FB;
+    cursor: pointer;
+    /* border: 1px solid #2568FB; */
+    /* border-left: 1px solid #2568FB; */
+    /* border-right: 1px solid #999;
+border-bottom: 1px solid #999; */
+}
+.back-face .testimonials{
+  color: #2568FB;
+}
+
+.card-1 .face.front-face,
+.card-1 .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+.card-1 .face.back-face{
+  color: #FECD45;
+  background-color: black !important;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-1 .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-1 .face.front-face .name {
+    letter-spacing: 2px;
+}
+
+.card-1 .face.front-face .designation {
+    font-size: 0.8rem;
+    color: #fff;
+    letter-spacing: 0.8px;
+}
+
+.card-1:hover .face.front-face {
+    transform: rotateY(180deg);
+}
+
+.card-1 .face.back-face {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.06);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card-1 .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    /* font-size: 1.2rem; */
+}
+
+.card-1 .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+}
+
+.card-1:hover .face.back-face {
+    transform: rotateY(360deg);
+}
+
+

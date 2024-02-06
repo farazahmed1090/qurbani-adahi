@@ -1,0 +1,53 @@
+.counter i {
+  color: black;
+  font-size: 2.5em;
+  text-align: center;
+}
+.counter h5 {
+  color: #2568fb;
+  display: grid;
+  place-items: center;
+  /* font-weight: 600; */
+  font-size: 2em;
+}
+.counter p {
+  color: #2568fb;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+}
+.company i {
+  color: black;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.company p {
+  color: black;
+  font-size: 1em;
+  text-align: center;
+  padding: 0.7em 0;
+  font-weight: 400;
+  line-height: 0;
+}
+
+.testimoniall .container .col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
+.product .container .col-lg-4 {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 991.5px) {
+  .col-lg-4 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+.Count_sec {
+  background-color: rgb(245, 245, 245);
+  box-shadow: 5px 7px 10px lightgrey;
+}

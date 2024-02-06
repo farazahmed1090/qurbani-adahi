@@ -1,0 +1,59 @@
+<input type="checkbox" id="check"> 
+<label (click)="Hide_show()" class="chat-btn" for="check">
+  <i class="fa fa-upload comment"></i>
+  <i class="fa fa-close close" ></i> 
+  <span class="first_text" >Upload Resume</span>
+  <span class="second_text">Resume</span>
+  </label>
+     <div class="wrapper"  *ngIf="form_div">
+        <div class="header" style="background-color: #2568FB;" >
+            <h6>Upload your CV</h6>
+            </div>
+     <!-- <div class="text-center p-2">
+        <span>Please fill out the form to submit CV</span>
+        </div>  -->
+        <form  [formGroup]="uploadForm" (ngSubmit)="onsubmit(uploadForm.value)">
+           <div class="chat-form">
+              <div class="field col-12">
+                 <label>
+                     <input type="text" formControlName="fname" placeholder=" " />
+                     <p [ngClass]="{'error':fname?.invalid,'fine' : fname?.valid}">First name</p>
+                 </label>
+             </div>
+             <!-- <div class="field col-12">
+               <label>
+                   <input type="text" formControlName="lname" placeholder=" " />
+                   <p>Last name</p>
+               </label>
+           </div> -->
+
+             <div class="field  col-12">
+              <label>
+                  <input type="email" formControlName="email" placeholder=" " />
+                  <p [ngClass]="{'error':email?.invalid,'fine' : email?.valid}" >Email (Official)</p>
+              </label>
+          </div>
+                <div class="field col-12">
+                 <label>
+                   <textarea rows="2" formControlName="description"
+                   placeholder=" ">
+                   </textarea>
+                   <p>Cover Letter</p>
+                 </label>
+               </div>
+               <div class="field col-12 emptyfield ">
+                 <label>
+                   <div [ngClass]="{'error_1':document?.invalid,'upload' : document?.valid}"  >
+                     <input  formControlName="document"  (change)="onFileSelected($event)" #fileUpload class="d-none" type="file">
+                     <button type="button" (click)="fileUpload.click()">
+                         <span *ngIf="icon_1" class="material-icons">cloud_upload</span><img *ngIf="img_div" class="img_div" src="assets/img/pdfimg.png">
+                      </button>
+                   </div>
+                 </label>
+         </div>
+
+          <button class="btn btn-success btn-block mt-2 w-100">Upload Your CV</button> 
+       </div>
+        </form>
+    
+</div>

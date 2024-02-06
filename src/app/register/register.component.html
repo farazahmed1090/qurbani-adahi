@@ -1,0 +1,78 @@
+<head>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <form [formGroup]="register_form" (ngSubmit)="submit(register_form.value)">
+      <div class="">
+        <div class="d-flex justify-content-center "><a routerLink="/">
+            <img src="assets/images/navbar_logo.jpg" width="80px" height="auto" alt=""></a></div>
+        <div class="d-flex justify-content-center mt-4" style="font-weight: 400; font-size:28px">
+         Sign up to RBH</div>
+        <div class=" mt-5">
+          <div class="field col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+            <label>
+              <input type="email" formControlName="email" placeholder=" " />
+              <p [ngClass]="{'error': email?.invalid, 'fine': email?.valid}">Email</p>
+            </label>
+            <span class="error" *ngIf="email?.invalid && email?.touched">Invalid Email
+              </span>
+          </div>
+          <div class="field col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+            <label>
+              <input type="password" name="password" formControlName="password" (keyup)="validate_pass()" placeholder=" " />
+              <p [ngClass]="{'error':password?.invalid, 'fine' : password?.valid}">Password</p>
+              <span class="error" *ngIf="password?.invalid && password?.touched">Password should 8 characters long.</span>
+            </label>
+            
+          </div>
+          <div class="field col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+            <label>
+              <input type="password" name="password" (keyup)="validate_pass()" formControlName="confirmpassword" placeholder=" " />
+              <p [ngClass]="{'error':c_password?.invalid, 'fine' : c_password?.valid}">Confirm Password</p>
+              <span class="error" *ngIf="c_password?.invalid && c_password?.touched">
+                Password should 8 characters long.</span>
+            </label>
+            <span class="error" *ngIf="pass_not_match">Passowrd not match</span>
+          </div>
+        </div>
+        <span *ngIf="email_exist" style="color:red">
+          It seems you already have account. <br> Pls login or click <a routerLink="/access-link" style= "color: #282871;"> forgot password</a> if you forget your password.
+          </span>
+          <span *ngIf="label_pass" class="" style="font-size:1rem;color:#282871; letter-spacing: 0.5px; ">Use Recommended Password</span>
+          <div *ngIf="Pass_div" class="mb-1 d-flex">
+            <div  class="col-12 r suggested_pass"><span>{{genPass}}</span>
+              <div class="col-4 check_box">
+                <i (click)="use_pass()" class="fa fa-check text-success fs-5"></i>
+                <i (click)="close()" class="fs-5 fa fa-close text-danger"></i>
+              </div>
+            </div>
+
+          </div>
+        <div class="last">
+          <p class=""><a href="/signin" style= "color: #282871;"> Login</a></p>
+          <div class="button">
+            <button type="submit" class="btn btn-primary w-20 ms-5"
+              style="background-color: #282871; border-color:#282871;">
+              Sign up</button>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="mt-2"><a routerLink="/access-link" style= "color: #282871;"> forget password?</a></p>
+          <p>or sign up with:</p>
+          <a href="https://www.facebook.com/" type="button" class="btn btn-link btn-floating mx-1 ">
+            <i class='bx bxl-facebook-circle ' style="font-size: 40px;" ></i>
+          </a>
+          <a href="https://accounts.google.com/AddSession/signinchooser?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Fhl%3Den%26utm_source%3DOGB%26utm_medium%3Dact&hl=en&ec=GAlAwAE&authuser=0&flowName=GlifWebSignIn&flowEntry=AddSession" type="button" class="btn btn-link btn-floating mx-1 ">
+            <i class='bx bxl-google  ' style="font-size: 40px;"></i>
+          </a>
+          <a href="https://github.com/login" type="button" class="btn btn-link btn-floating mx-1 ">
+            <i class='bx bxl-github' style="font-size: 40px;" ></i>
+          </a>
+        </div>
+      </div>
+      
+      
+    </form>
+  </div>
+  </body>

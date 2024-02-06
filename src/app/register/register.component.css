@@ -1,0 +1,206 @@
+/* input:focus {
+    border-color: #282871 !important}
+    
+     label input:focus+p,
+    select:focus+p,
+    textarea:focus+p,
+     label input:not(:placeholder-shown)+p,
+    select:not(:placeholder-shown)+p,
+    textarea:not(:placeholder-shown)+p {
+      top: -1px;
+      font-size: 0.9rem;
+      color: #282871 ;
+    }
+    
+    a{
+      text-decoration: none;
+      color: #282871;
+    }
+    
+    a:hover{
+      cursor: pointer;
+    }
+    
+    form {
+       background-color: transparent;
+       border: none; 
+       border-radius: none; 
+       padding-top: none;
+       padding-bottom: none; 
+    }
+    
+    
+    button:focus{
+      box-shadow: none !important;
+    }
+    .last{
+display: flex;
+flex-direction: row;
+    }
+    .account{
+align-self: flex-start;
+    }
+    .button{
+        background-color: transparent;
+margin-left: auto;
+padding-left: 5px;
+padding-right: 0;
+    }
+    .social-icons{
+   display: block;
+    }
+    .social-icon{
+      display: flex;
+      justify-content: center;
+     
+      margin-bottom: 20px;
+      height: 22px;
+      text-align: center;
+      font-size: 16px;
+      color: #999;
+    }
+/* .social-icon>span{
+
+   display: inline-block; 
+  height: 1px;
+  width: 25%;
+  background-color: #c8c8c8;
+} */
+/* .social-icon>label{
+  white-space: nowrap;
+  padding: 0 20px;
+}
+    */ 
+    input:focus {
+      border-color: #282871 !important}
+      
+       label input:focus+p,
+      select:focus+p,
+      textarea:focus+p,
+       label input:not(:placeholder-shown)+p,
+      select:not(:placeholder-shown)+p,
+      textarea:not(:placeholder-shown)+p {
+        top: -1px;
+        font-size: 0.9rem;
+        color: #282871 ;
+      }
+      
+      a{
+        text-decoration: none;
+        color: #282871;
+      }
+      
+      a:hover{
+        cursor: pointer;
+      }
+      
+      form {
+         background-color: transparent;
+         border: none; 
+         border-radius: none; 
+         padding-top: none;
+         padding-bottom: none; 
+      }
+      
+      
+      button:focus{
+        box-shadow: none !important;
+      }
+      .last{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+      }
+      .account{
+  align-self: flex-start;
+      }
+      .button{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+          background-color: transparent;
+          padding-right: 0;
+          margin-right: 0;
+          
+  align-self: flex-end;
+      }
+      .social-icons{
+     display: block;
+      }
+      .social-icon{
+        display: flex;
+        justify-content: center;
+       
+        margin-bottom: 20px;
+        height: 22px;
+        text-align: center;
+        font-size: 16px;
+        color: #999;
+      }
+  /* .social-icon>span{
+  
+     display: inline-block; 
+    height: 1px;
+    width: 25%;
+    background-color: #c8c8c8;
+  } */
+  .social-icon>label{
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+  }
+  .container{
+    max-width: 370px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 3;
+    background-color: aliceblue;
+    border: 1px solid rgb(204, 197, 197);
+  }
+  @media(max-width: 584px){
+    .container{
+     max-width: 70%;
+   }
+  }
+
+  @media(max-width: 450px){
+    .container{
+     max-width: 95%;
+   }
+  }
+  .suggested_pass{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 9px;
+    align-items: center;
+    /* border: 2px solid green; */
+    background-color: rgb(187, 242, 187);
+    color:green;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+
+
+  }
+  .check_box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+  }
+  label p{
+    background-color: aliceblue !important;
+  }

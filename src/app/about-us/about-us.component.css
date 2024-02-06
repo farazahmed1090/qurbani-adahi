@@ -1,0 +1,240 @@
+.main_div{
+    background-color:#FECD45;
+    padding-bottom: 1%;
+}
+.heroSection{
+    height: 400px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+
+.alphaSection{
+    width: 100%;
+    background-color: #EEEBED;
+    padding:2% 3% 2% 5%
+    
+}
+.alphaSection h3, .betaSection h3,.card-body h5 , .estimateinfo h3{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 20px 0px
+}
+.betaSection{
+    padding: 0px 2.5% 0 2%
+}
+
+h2{
+    margin: 3% 0px ;
+    font-size: 28px;
+}
+.alphaSection p{
+    font-size: 14px
+}
+.card-body{
+    padding: 3% 3% 6% 4%;
+    height: 220px;
+    padding: 3% 3% 6% 4%;
+    max-width: 500px;
+}
+.card{
+    border-bottom: 10px solid #2568FB;
+    border-right:10px solid #2568FB ;
+    margin-top: 2%;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+.container {
+    margin: 3em auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 50px;
+    grid-auto-flow: dense;
+    grid-gap: 5px;
+    padding: 2% 4% 2% 4%;
+  }
+  
+  .large, .medium, .small {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    grid-column: auto / span 1;
+  }
+  
+  .large {
+    grid-row: span 4;
+  }
+  
+  .medium {
+    grid-row: span 3;
+  }
+  
+  .small {
+    grid-row: span 2;
+  }
+  
+  .container img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+       opacity: 1;
+  }
+  .container img:hover{
+    width: 100%;
+    
+  }
+
+  .light-text {
+    font-size: 18px;
+    color: #696969;
+}
+.bold-text {
+    color: #1967d2;
+    font-size: 30px;
+    font-weight: 500;
+}
+.counter{
+    padding: 0% 5.5% 2% 5.5%
+}
+
+.estimate img{
+    max-width:100%;
+    /* max-height: 100%; */
+}
+.estimate p{
+    margin: 0px;
+}
+.estimateinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+.estimate{
+    background-color: #EEEBED;
+    margin: 2% 0% 2% 0%;
+    justify-content: space-evenly;
+}
+
+.counterA{
+    text-align: center;
+    border: 1px solid #0303032f;
+    padding: 1%;
+   
+}
+.counterA:hover{
+    box-shadow: 0 0 10px gray; 
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+
+
+
+@media (max-width: 998px){
+    .gal{
+        justify-content: center !important;
+        margin-left: 0.5%;
+      }
+      .imageGallery img{
+        margin: 3% 0px;
+    }
+    .estimate{
+        margin: 2% 4%;
+    }
+    .estimateinfo{
+        padding: 20px;
+    }
+      
+}
+
+@media (max-width:768px) {
+   
+    .heroSection {
+      
+      height: 250px;
+      width: 100%;
+      background-attachment: initial;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding-left: 6%;
+  }
+ 
+  .counterA{
+   margin-top: 3%;
+   
+}
+.counter{
+    margin-bottom: 5%;
+}
+  .estimate{
+    margin-bottom: 5%;
+  }
+    
+  }
+
+  .geeks {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.geeks img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.geeks:hover img {
+    transform: scale(1.5);
+}
+.imageGallery img{
+    transition: 0.5s all ease-in-out;
+}
+.imageGallery img:hover{
+    transform: scale(0.9);
+}
+.imageGallery img{
+    width: 100%;
+}
+.imageGallery{
+    margin-left: 1.5%;
+}

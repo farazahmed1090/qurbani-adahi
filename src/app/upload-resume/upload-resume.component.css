@@ -1,0 +1,139 @@
+.main_div {
+  /* background-color: #FECD45; */
+  background-color: whitesmoke;
+  height: 878px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.upload {
+        color: #2568FB;
+        padding: 5px 5px;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 14px;
+        border: 1px dashed #2568FB;
+    
+        cursor: pointer;
+        height: 82px;
+  
+  }
+  
+  .emptyfield{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 12px;
+    height: 100%;
+    }
+  
+ .interest{
+    background-color: #2568FB;
+    color: white;
+    border: 1px solid gray;
+    padding: 3px;
+    margin-right: 3px;
+    margin-top: 10px;
+    align-content: flex-end;
+   
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .upload .material-icons{
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    z-index: 100;
+    color: #FECD45;
+    font-size: 30px;
+  }
+  @media (max-width:990px) {
+    .upload .material-icons{
+      /* color: black !important; */
+      position: absolute;
+      top: 37%;
+      left:48%;
+    }
+  }
+  .img_div{
+    height: 75px;
+    width: 100%;
+    /* position: absolute;
+    top: 7%;
+    left: 25%; */
+    z-index: 0;
+    
+  }
+  
+
+  .btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 2px solid transparent ;
+  border-radius: 0.6em;
+  color: #fff;
+  background-color: #2568FB;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 15px 29px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.btn:hover {
+  color:#2568FB;
+  border: 2px solid #2568FB;
+  outline: 0;
+}
+.first {
+  -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 40px 40px #FECD45 inset;
+}
+.card{
+  z-index: 0;
+  /* background-color: #f3f1f0; */
+  animation-name: form_animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 10px lightgray;
+
+}
+@keyframes form_animation {
+  from{
+    transform: translateX(-800px);
+  }
+  to{
+transform: translateX(0px);
+  }
+}
+
+
+
+
+
+
+
+
+
+

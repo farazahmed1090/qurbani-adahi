@@ -1,0 +1,200 @@
+<app-header></app-header>
+<!-- hero section -->
+  <div class="hero_section">
+    <app-particle></app-particle>
+    <div>
+        <h1 class="first_section_heading"data-aos="fade-up" data-aos-duration="1000">Apply For <span class="heading1"></span> Job </h1>
+    </div>  
+    </div>
+    <!-- end -->
+    <body class="main_div  body_div ">
+    <div class="row d-flex justify-content-center  mx-md-3 mx-sm-3 mx-3 mx-lg-0 ">
+        <div class="card col-lg-5 col-md-12 contact_form  mb-lg-0 mb-3  mt-5  " data-aos="fade down" data-aos-duration="1000" >
+            <div class="card-header">
+                <span class=" d-flex align-items-center">
+                    <span  class="material-icons">perm_contact_calendar</span> Apply For Job
+                </span>
+            </div>
+            <form [formGroup]="uploadForm" (ngSubmit)="onsubmit(uploadForm.value)">
+            <div class="card-body pt-3 pb-2 px-4" style="border-bottom: 0.5px solid rgb(223, 223, 223);"> 
+                <div class=" row">
+                   
+                    <div class="field col-lg-6 col-md-12 col-sm-12 ">
+                        <label>
+                            <input type="text" formControlName="fname" placeholder=" " />
+                            <p [ngClass]="{'error': fname?.invalid, 'fine': fname?.valid}">First Name</p>
+                        </label>
+                    </div>
+                    <div class="field    col-lg-6 col-md-12 col-sm-12 ">
+                        <label>
+                            <input type="text" formControlName="lname" placeholder=" " />
+                            <p>Last Name</p>
+    
+                        </label>
+                    </div>
+                    <div class="field    col-lg-4 col-md-12 col-sm-12 " >
+                        <label>
+                            <input type="number" formControlName="phone" placeholder=" " />
+                            <p [ngClass]="{'error': phone?.invalid, 'fine': phone?.valid}">Phone</p>
+    
+                        </label>
+                    </div>
+                    <div class="field    col-lg-4 col-md-12 col-sm-12 ">
+                        <label>
+                            <input type="email" formControlName="email" placeholder=" " />
+                            <p [ngClass]="{'error': email?.invalid, 'fine': email?.valid}">Email (Official)</p>
+    
+                        </label>
+                    </div>
+                    
+                    <div class="field    col-lg-4 col-md-12 col-sm-12">
+                        <label>
+                            <select formControlName="qualification">
+                                <option   value="" selected disabled>Option Name</option>
+                                <option value="PHD">PHD</option>
+                              <option value="Masters">Masters</option>
+                              <option value="Bachelors">Bachelors</option>
+                              <option value="Undergraduate">Undergraduate</option>
+                              <option value="Diploma">Diploma</option>
+                              <option value="Inter">Inter</option>
+                              <option value="Other">Other</option>
+                            </select>
+                            <p [ngClass]="{'error': qualification?.invalid, 'fine': qualification?.valid}">Qualification</p>
+                        </label>
+                    </div>
+                </div>
+
+                </div>
+                  <div class="card-body pb-1 pt-3 px-4">
+                    <div class=" row d-flex justify-content-start ">
+                    <div class="field col-lg-12 col-md-12 col-sm-12">
+                        <label>
+                            <select formControlName="interest" (change)="interest($event.target)" >
+                                <option   value="" selected disabled>Job Interest</option>
+                                <option *ngFor="let j of all_jobs" value="{{j.job_title}}">
+                                    {{j.job_title}}
+                                </option>
+                            </select>
+                            <p>Interests</p>   
+                            <div >
+                               <span class="interest" *ngFor="let i of interestList; let ii=index">
+                               <span (click)="remove(ii)"> {{i}}</span><span class='material-icons'(click)="remove(ii)" style="font-size: 14px; color: red;" >close</span>
+                                </span>
+                            </div>                    
+                            
+                        </label>
+                    </div>
+                    
+                    <div class="field col-lg-9 col-md-12 col-sm-12 ">
+                    <label>
+                      <textarea rows="2" formControlName="description"
+                      placeholder=" ">
+                      </textarea>
+                      <p >Description</p>
+                    </label>
+                  </div>
+                        <div class="field col-lg-3 col-md-12 col-sm-12 emptyfield">
+                            <label>
+                              <div [ngClass]="{'error_1':document?.invalid,'upload' : document?.valid}">
+                                <input  formControlName="document"  (change)="onFileSelected($event)" #fileUpload class="d-none" type="file"   >
+                                <button type="button" (click)="fileUpload.click()">
+                                    <span *ngIf="icon_1" class="material-icons">cloud_upload</span><img *ngIf="img_div" class="img_div" src="assets/images/job-seekers/pdfimg.png">
+                                 </button>
+                              </div>
+                            </label>
+                    </div>
+                    <div class="col-12 d-flex justify-content-end ">
+                        <button type="submit" class="btn first ">Submit</button>
+                    </div>
+                
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center  mt-5 ">
+        <h3 class=" col-7 d-flex justify-content-center heading">
+            Apply Now For These Exciting Features
+        </h3>
+
+    </div>
+        <div class="row   mx-md-3 mx-sm-3 mx-3 mx-lg-0    mt-5 d-flex justify-content-center ">
+            <div class="col-lg-3 d-flex justify-content-center">
+                <div class="card-1" data-aos="zoom-out-right"  data-aos-duration="1000">
+                    <div class="face front-face">
+                        <img src="assets/images/job-seekers/work-at-your-own-time.png"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Flexible Working Hours
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fa fa-quote-left"></span>
+                        <div class="testimonial">
+                            Be your own boss and choose the working hours that suit you
+                        </div>
+                        <span class="fa fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 d-flex justify-content-center">
+                <div class="card-1" data-aos="zoom-out-up"  data-aos-duration="1000">
+                    <div class="face front-face">
+                        <img src="assets/images/job-seekers/work-from-home.png"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Work From Home
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fa fa-quote-left"></span>
+                        <div class="testimonial">
+                            No more rushing to the office and being worried about reaching on time
+                        </div>
+                        <span class="fa fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 d-flex justify-content-center">
+                <div class="card-1" data-aos="zoom-out-up">
+                    <div class="face front-face">
+                        <img src="assets/images/job-seekers/key-postions.png"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Key Positions Placement
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fa fa-quote-left"></span>
+                        <div class="testimonial">
+                            Your dream job is just one click away, as we care about your career goals
+                        </div>
+                        <span class="fa fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 d-flex justify-content-center">
+                <div class="card-1"  data-aos="zoom-out-left"  data-aos-duration="1000">
+                    <div class="face front-face">
+                        <img src="assets/images/job-seekers/around-the-world-hiring.png"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            We Hire Across The Globe
+                        </div>
+                    </div>
+                    <div class="face back-face">
+                        <span class="fa fa-quote-left"></span>
+                        <div class="testimonial">
+                            Your location should not stop you from getting your dream job, we got you covered
+                        </div>
+                        <span class="fa fa-quote-right"></span>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <app-last-sec></app-last-sec> 
+        <app-quick-link></app-quick-link>
+
+</body>
+<app-footer></app-footer>

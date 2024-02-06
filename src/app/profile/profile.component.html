@@ -1,0 +1,289 @@
+
+<app-header></app-header>
+<div class="profile_div"> 
+
+  
+  <div class="main">
+  <!-- <span class='material-icons me-1'>person</span> -->
+    <div class="pt-3 pb-3 ">
+        <div class="empl_name col-10" style="font-size: 22px;padding-left: 11px; color: #2568fb;"> Profile </div>
+        <hr class="m-0 " style="margin-top: -5px !important; " >
+        <div class="row  m-0 p-0 main_row">
+            <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 d-flex flex-column res">
+                <ul style="list-style-type: none; letter-spacing: 1px; " class="m-0 p-0" id="ul" >
+                    <li   class="" 
+                    [style.color]="fontColor1"
+                    
+                    id="info" (click)="show_posts($event)" > Personal Info
+                    </li>
+                    <hr class="m-0">
+                    <li   
+                    *ngIf="applied_li"   [style.color]="fontColor2"
+                     id="applied" (click)="show_posts($event)"> Jobs Applied
+                         </li>
+                    <hr class="m-0">
+                    <li *ngIf="post_li"  
+                          [style.color]="fontColor3"
+                     id="posts" (click)="show_posts($event)"> All Posts
+                         </li>
+                    <hr class="m-0">
+                </ul>
+            </div>
+            <div class="col-xl-9 col-lg-10 col-md-10 col-sm-12 col-12 mt-1 contain">
+
+                  <div *ngIf="info" class=" col-11 mt-2 ">
+                    <span class="seeker" style="font-size: 16px;font-weight: 400; ">{{employName || JobSeekerName }}</span> 
+                    <hr class="m-0">
+                    <!-- <div class="mt-2 mb-2 fs-5  col-sm-12 manage_div" style="color: grey;"><span class="manage"
+                       style="font-size: 16px;">Manage your personal Information</span></div>
+                    <hr class="m-0 "> -->
+                    <div  class=" mt-2 d-flex justify-content-between align-items-center  ">
+                      <span class="per_info" style="font-size: 16px; color:grey">Personal Information</span>
+                      <span class="edit" (click)="edit_job_seeker()"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: rgba(40, 77, 146, 0.911); font-size: 16px; font-weight:600;">Edit
+                      </span>
+                       
+                      <!-- <----  Modal Starts edit_profile ----->
+         
+                        <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title " style="padding-left: 25px;" id="exampleModalLabel">Edit your personal information</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <form [formGroup]="edit_profile" (ngSubmit)="submit(this.edit_profile.value)" >
+                              <div class="modal-body ">
+                               
+                              
+                                <div class="card-body pt-3 pb-2 px-4" style="border-bottom: 0.5px solid rgb(223, 223, 223);"> 
+                                  <div class=" row  ">
+                                     
+                                      <div class="field col-lg-6 col-md-12 col-sm-12">
+                                          <label>
+                                              <input type="text" formControlName="fname" placeholder=" " />
+                                              <p [ngClass]="{'error': fname?.invalid, 'fine': fname?.valid}">First Name</p>
+                                          </label>
+                                      </div>
+                                      <div class="field    col-lg-6 col-md-12 col-sm-12">
+                                          <label>
+                                              <input type="text" formControlName="lname" placeholder=" " />
+                                              <p [ngClass]="{'error': lname?.invalid, 'fine': lname?.valid}">Last Name</p>
+                      
+                                          </label>
+                                      </div>
+                                      <div class="field    col-lg-3 col-md-12 col-sm-12">
+                                          <label>
+                                              <input type="number" formControlName="phone_number" placeholder=" " />
+                                              <p [ngClass]="{'error': phone_number?.invalid, 'fine': phone_number?.valid}">Phone</p>
+                      
+                                          </label>
+                                      </div>
+                                      <div class="field    col-lg-3 col-md-12 col-sm-12">
+                                        <label>
+                                            <input type="text" formControlName="country" placeholder=" " />
+                                            <p [ngClass]="{'error': country?.invalid, 'fine': country?.valid}">Country</p>
+                    
+                                        </label>
+                                    </div>
+                                    <div class="field    col-lg-3 col-md-12 col-sm-12">
+                                      <label>
+                                          <input type="text" formControlName="state" placeholder=" " />
+                                          <p [ngClass]="{'error': state?.invalid, 'fine': state?.valid}">State</p>
+                  
+                                      </label>
+                                  </div>
+                                  <div class="field    col-lg-3 col-md-12 col-sm-12">
+                                    <label>
+                                        <input type="text" formControlName="city" placeholder=" " />
+                                        <p [ngClass]="{'error': city?.invalid, 'fine': city?.valid}">City</p>
+                
+                                    </label>
+                                </div>
+                                <div class="field  col-lg-6 col-md-12 col-sm-12">
+                                  <label>
+                                      <input type="text" formControlName="address" placeholder=" " />
+                                      <p [ngClass]="{'error': address?.invalid, 'fine': address?.valid}">Address</p>
+              
+                                  </label>
+                              </div>
+                              <div class="field    col-lg-6 col-md-12 col-sm-12">
+                                <label>
+                                    <input type="text" formControlName="summary" placeholder=" " />
+                                    <p [ngClass]="{'error': summary?.invalid, 'fine': summary?.valid}">Summary</p>
+            
+                                </label>
+                            </div>
+                            <div class="field    col-lg-3 col-md-12 col-sm-12">
+                              <label>
+                                  <input type="text" formControlName="qualification" placeholder=" " />
+                                  <p [ngClass]="{'error': qualification?.invalid, 'fine': qualification?.valid}">Qualification</p>
+          
+                              </label>
+                          </div>
+                          <div class="field    col-lg-3 col-md-12 col-sm-12">
+                            <label>
+                                <input type="text" formControlName="experience" placeholder=" " />
+                                <p [ngClass]="{'error': experience?.invalid, 'fine': experience?.valid}">Experience</p>
+        
+                            </label>
+                        </div>
+                                      
+                                      <div class="field  col-lg-3 col-md-12 col-sm-12">
+                                          <label>
+                                              <input (change)="get_city_state_by_zipcode()" type="number" formControlName="zip_code" placeholder=" " />
+                                              <p [ngClass]="{'error': zip_code?.invalid, 'fine': zip_code?.valid}">Zip Code</p>
+                      
+                                          </label>
+                                      </div>
+
+                                      <div class="field    col-lg-3 col-md-12 col-sm-12">
+                                        <label>
+                                            <input type="text" formControlName="interests" placeholder=" " />
+                                            <p [ngClass]="{'error': interests?.invalid, 'fine': interests?.valid}">Interests</p>
+                    
+                                        </label>
+                                    </div>
+                                    <div class="field col-lg-6 col-md-12 col-sm-12 emptyfield">
+                                      <label>
+                                        <div  class="upload">
+                                          <input  formControlName="resume"  (change)="onFileSelected($event)" #fileUpload class="d-none" type="file"   >
+                                          <button type="button" (click)="fileUpload.click()">
+                                              <span *ngIf="icon_1" class="material-icons">cloud_upload</span><img *ngIf="img_div" class="img_div" src="{{imgurl}}{{fileName}}">
+                                           </button>
+                                      
+                                        </div>
+                                      </label>
+                              </div>
+                              
+                                  <div class="field  col-lg-6 col-md-12 col-sm-12">
+                                    <label>
+                                        <input type="text" formControlName="id" placeholder=" " />
+                                        <p [ngClass]="{'error': id?.invalid, 'fine': id?.valid}">Id</p>
+                
+                                    </label>
+                                </div>
+                                
+                                  </div>
+                                  </div>
+                              </div>
+                              <div class="modal-footer">
+                                <!-- <span class='material-icons close' >close</span> -->
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  >Close</button>
+                                <button type="submit" class="btn btn-primary"   style="background-color:#2568FB; border: 1px solid #2568FB" >Submit</button>
+                              </div>
+                            </form>
+                            </div>
+                          </div>
+                        </div>
+
+<!-- Modal Ends -->
+                    </div>
+                    <div class="table-responsive">
+
+                     <table class="table mt-2 fname">
+   
+   <tbody *ngFor="let i of myArray2" >
+    <tr class="" id="tr" >
+      <td class="">First Name</td>
+      <td class="">{{i.job_seeker_fname || i.employer_fname }}</td>
+      <td class="">Last Name</td>
+      <td class="">{{i.job_seeker_lname || i.employer_fname }}</td>
+    </tr>
+    <tr class="" id="tr">
+      <td>Email</td>
+      <td>{{i.email}}</td>
+      <td>Password</td>
+      <td>{{i.password}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+                  </div>
+
+                  <div class="row bg mt-3 ps-3 d-flex justify-content-start" *ngIf="applied">
+
+                    <div *ngFor="let i of myArray4" class=" d-flex flex-column justify-content-between col-xl-3 col-lg-6 col-md-6 col-sm-6 col-10 px-1 pt-1  mb-2"  style="border-radius: 5px; border: 1px solid grey">
+                        
+                      <div class="row m-0 p-0">
+                          <div class="col-9 m-0 p-0" style="font-size: 12px; font-weight:400; text-transform: capitalize;">{{i.job_title}}</div>
+                          <div class="col-3 text-end p-0" style="font-size: 12px; font-weight:500;text-transform: capitalize;">applied</div>
+                         </div>
+
+                         <div class="d-flex justify-content-between align-items-center">
+
+                          <div class=" d-flex justify-content-center align-items-center"><span style="margin-right:2px">$</span>
+                             <span style="font-size: 10px;" >{{i.min_salary}} - {{i.max_salary}}
+                          </span> 
+                        </div>
+                          <div class="d-flex justify-content-center align-items-center">
+                            <span class='material-icons me-1' style="font-size: 16px;">business_center</span>
+                             <span style="font-size: 12px;">{{i.job_type}}</span>
+                          </div>
+
+                          <!-- <div class=" d-flex justify-content-center align-items-center">
+                            <span style="font-size: 10px;" >Time_Applied
+                         </span> 
+                       </div>
+                         <div class="d-flex justify-content-center align-items-center">
+                            <span style="font-size: 12px;">{{my_time_stamp}}</span>
+                         </div> -->
+                          
+                        </div>     
+
+                    </div>
+
+                  </div>
+
+
+                  <!-- Posts Data Starts ( EMPLOYERS) -->
+                  <div class="table-responsive">
+                    <table  class="table mt-3 mb-3 " *ngIf="posts">
+                      <thead>
+                        <tr >
+                          <th scope="col" class="col-2" >Job Type</th>
+                          <th scope="col" class="col-3">Comp Name</th>
+                          <th scope="col" class="col-4">Job Desc.</th>
+                          <th scope="col" class="col-2 ">Salary</th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                        <tr id="employ_table" *ngFor="let i of myArray3 | paginate : {
+                          itemsPerPage : 4,
+                          currentPage : p,
+                          totalItems : totallength}"  >
+                          <td  scope="row">{{i.job_type}}</td>
+                          <td scope="row">{{i.job_company_name}}</td>
+                          <td scope="row">{{i.job_description}}</td>
+                          <td scope="row">{{i.job_minimum_salary}}</td>
+                        </tr>
+                        
+                        
+                      </tbody>     
+                    </table>  
+                  </div>
+                    <pagination-controls *ngIf="hidePagination" class=" float-end text-end d-block pe-5" style="margin-top: -12px; " previousLabel="Prev" nextLabel="Next" (pageChange)="p=$event">
+                   </pagination-controls>
+                        
+                
+                  <!-- Posts Data Ends ( EMPLOYERS) -->
+            </div>
+           
+            
+            
+        </div>
+    
+    </div>
+    
+    
+</div>
+
+
+</div>
+
+
+
+
+
+
+<app-footer></app-footer>

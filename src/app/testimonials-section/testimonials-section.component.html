@@ -1,0 +1,51 @@
+
+   <head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+   <section class="testimonialll">
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-duration="500" >
+                <div class="col-md-8 mx-auto text-center">
+                    <h3 class="mb-5 mt-5 heading">
+                        Testimonials
+                    </h3>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <owl-carousel-o [options]="customOptions"  data-aos="fade-up" data-aos-duration="500" >
+                        <ng-template carouselSlide *ngFor="let i of all_testimonials">
+                        <div class="card" >
+                            <div class="face front-face">
+                                <img src="assets/images/testimonails/{{i.image}}"
+                                    alt="" class="profile">
+                                <div class="pt-3 text-uppercase name">
+                                    {{i.posted_by}}
+                                </div>
+                                <div class="designation">
+                                    <div class="mt-2 d-flex justify-content-between align-items-center">
+                                        <div class="small-ratings">
+                                            <i class="fa fa-star rating-color"></i>
+                                            <i class="fa fa-star rating-color"></i>
+                                            <i class="fa fa-star rating-color"></i>
+                                            <i class="fa fa-star rating-color"></i>
+                                            <i class="fa fa-star rating-color"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face back-face">
+                                <span class="fa fa-quote-left"></span>
+                                <div class="testimonial">
+                                   {{i.detail}} 
+                                </div>
+                                <span class="fa fa-quote-right"></span>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </section> 

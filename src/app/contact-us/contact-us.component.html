@@ -1,0 +1,98 @@
+<app-header></app-header>
+<!-- hero section -->
+  <div class="hero_section">
+   <app-particle></app-particle>
+    <div>
+        <h1 class="first_section_heading" data-aos="fade-up" data-aos-duration="1000">We'd Love to <span class="heading1"></span> You. </h1>
+    </div>  
+    </div>
+    <!-- end -->
+    <body class="main_div body_div">
+    
+    <div class="row flex-md-row-reverse m-0 p-0 pt-5  d-flex justify-content-evenly mx-md-3 mx-sm-3 mx-3 mx-lg-0 ">
+       
+        <div class="card  col-lg-6 col-md-12 m-0 p-0 contact_form mb-5  "  data-aos="fade-left" data-aos-duration="1000">
+            <div class="card-header">
+                <span class=" d-flex align-items-center">
+                    <span  class="material-icons">perm_contact_calendar</span> Contact us
+                </span>
+            </div>
+            <form [formGroup]="Contact_form" (ngSubmit)="onsubmit(Contact_form.value)">
+        <div class=" card-body row m-0 p-0 p-4 justify-content-end ">
+            <div class="field col-lg-6 col-md-12 col-sm-12">
+                <label>
+                    <input type="text" formControlName="fname" placeholder=" " />
+                    <p [ngClass]="{'error': fname?.invalid, 'fine': fname?.valid}" >First Name</p>
+                </label>
+            </div>
+            <div class="field col-lg-6 col-md-12 col-sm-12">
+                <label>
+                    <input type="text" formControlName="lname" placeholder=" " />
+                    <p>Last Name</p>
+
+                </label>
+            </div>
+            <div class="field    col-lg-6 col-md-12 col-sm-12">
+                <label>
+                    <input type="number" formControlName="phone" placeholder=" " />
+                    <p [ngClass]="{'error': phone?.invalid, 'fine': phone?.valid}" >Phone</p>
+
+                </label>
+            </div>
+            <div class="field    col-lg-6 col-md-12 col-sm-12">
+                <label>
+                    <input type="email" formControlName="email" placeholder=" " />
+                    <p [ngClass]="{'error': email?.invalid, 'fine': email?.valid}" >Email</p>
+
+                </label>
+            </div>
+            <div class="field col-lg-12 col-md-12 col-sm-12">
+                <label>
+                  <textarea rows="2" formControlName="description"
+                  placeholder=" ">
+                  </textarea>
+                  <p [ngClass]="{'error': description?.invalid, 'fine': description?.valid}" >Description</p>
+                </label>
+              </div>
+<div class="col-2 col-3 d-flex justify-content-end ">
+    <button type="submit" class="btn first ">Submit</button>
+</div>
+        </div>
+    </form>
+
+        </div>
+        <div class="col-lg-5 col-md-12  map_div m-0 p-0 mb-5  " data-aos="fade-right" data-aos-duration="1000">   
+            <iframe src="https://maps.google.com/maps?q=12%20Marina%20Blvd%20%20Singapore&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"></iframe>
+
+
+            <!-- <div class="mapouter"><div class="gmap_canvas"><iframe src="https://maps.google.com/maps?q=12%20Marina%20Blvd%20%20Singapore&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" id="gmap_canvas" frameborder="0" scrolling="no" style="width: 910px; height: 410px;"></iframe><a href="https://technologg.com/" style="display:none">technologg</a><style>.mapouter{position:relative;text-align:right;height:410px;width:910px;}</style><style>.gmap_canvas{overflow:hidden;background:none!important;height:410px;width:910px;}</style></div></div> -->
+            
+        </div>
+    </div>
+    <div class="row d-flex justify-content-between mt-2  mx-lg-5 mx-md-3 mx-sm-3 mx-3  ">
+        <div class="col-md-12  col-xl-3 contact_cards"  data-aos="fade-up" data-aos-duration="1000">
+        <span class="col-2 d-flex justify-content-center  "><span  class="material-icons">location_on</span></span>
+        <span class="col-10 card_2">
+            <span class="heading_1">Address</span>
+            <p>12 Marina Boulevard Ste# 17-01, Tower 3 Marina Bay Financial Centre Singapore</p>
+        </span>
+        </div>
+        <div class="col-md-12  col-xl-3 contact_cards" data-aos="fade-up" data-aos-duration="1500">
+            <span class="col-2 d-flex justify-content-center "><span  class="material-icons">call</span></span>
+            <span class="col-10 card_2">
+                <span class="heading_1">Call Us</span>
+                <p>+1 469 513 9488</p>
+            </span>
+        </div>
+        <div class="col-md-12  col-xl-3 contact_cards" data-aos="fade-up" data-aos-duration="2000">
+            <span class="col-2 d-flex justify-content-center "><span class="material-icons">mail_outline</span></span>
+            <span class="col-10 card_2">
+                <span class="heading_1">Email Address</span>
+                <p>info@remotebasehire.com</p>
+            </span>
+        </div>
+      </div>
+
+      <app-quick-link></app-quick-link>
+</body>
+<app-footer></app-footer>

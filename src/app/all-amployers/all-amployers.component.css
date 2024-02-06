@@ -1,0 +1,146 @@
+.container{
+    position: relative;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+}
+.container-fluid{
+    position: relative;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+}
+.card{
+    background-color: #FECD45;
+    padding: 0px !important;
+}
+
+.card-body span {
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 5px ;
+    padding-bottom: 5px ;
+}
+
+.card-body{
+    text-align: center;
+}
+
+#hide-show span{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.bold-text{
+      color: #1967d2;
+      font-size: 50px;
+      font-weight: 500;
+}
+
+.light-text{
+    font-size: 18px;
+    color: #696969;
+}
+.background_img{
+    /* background-image: url(../../assets/images/office-skyscrapers-business-district.jpg); */
+    height: 500px ;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-color: black;
+
+}
+.heading{
+    color: #ffff;
+    font-weight: 300;
+    font-size: 60px;
+    /* background-color: #2568FB; */
+    text-align: center;
+    font-style: 'Simplifa';
+    letter-spacing: 2px;
+}
+.card-title, .card-text{
+    color: #000
+}
+.card-title
+.card-text{
+    font-size: 14px;
+}
+
+
+.firstSection {
+    margin: 6% 0px;
+}
+.secondSection{
+    margin-top: 3%;
+}
+.Versatile{
+    padding: 2% 0px;
+}
+.Versatiled{
+    width: 90%;
+}
+.startup{
+    justify-content: center;
+    align-items: center;
+    color: #FECD45 ;
+    background-color: #0A0806;
+    border: 2px solid transparent;
+    text-decoration: none;
+    margin: 0px 8px 0px 0px;
+    padding: 10px 20px 10px 12px;
+    /* border-radius: 4px; */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+.startup-1{
+    min-height: 10px;
+    margin-right: 8px;
+}
+.startup:hover{
+    background-color: #FECD45;
+    color: #000;
+   
+}
+.search-title{
+ 
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: "Proxima Nova Bold", "Proxima Nova";
+    color: white;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+}
+
+@media(max-width:768px){
+    .firstSection{
+        justify-content: center!important;
+    }
+    .card{
+        margin: 2% 0px;
+    }
+    h2.search-title {
+        padding: 0px 10%;
+    }
+}
+
+@media(max-width:998px){
+    .card{
+        margin: 2% 0px;
+    }
+}
+
+@media(max-width:750px){
+    .backup{
+        display: none;
+    }.startup{
+        margin-bottom: 5px;
+    }
+}

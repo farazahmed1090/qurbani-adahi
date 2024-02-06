@@ -1,0 +1,38 @@
+.order-page {
+    .order-tabs {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color: rgb(218, 218, 218);
+        border-bottom: 2px solid rgb(218, 218, 218);
+        padding: 1rem 0rem;
+        // margin-top: 3rem;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+        gap: 10px;
+        min-width: 22rem;
+
+        .fill1 {
+            fill: rgb(218, 218, 218);
+        }
+    }
+
+    .active-tab {
+        color: blue;
+        border-bottom: 2px solid blue !important;
+
+        .fill1 {
+            fill: blue !important;
+        }
+    }
+
+    .order-div {
+        background-color: whitesmoke;
+        box-shadow: 0px 0px 4px rgb(209, 209, 209);
+        height: 300px;
+        margin-top: 2rem;
+    }
+
+}

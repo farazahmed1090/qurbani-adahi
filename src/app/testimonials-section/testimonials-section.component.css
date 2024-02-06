@@ -1,0 +1,231 @@
+
+@media  screen and (max-width:1024px) {
+    /* .row{
+         justify-content: space-around;
+    } */
+    .card-effect1{
+        /* height: 26vmin;
+        width: 26vmin; */
+        font-size: 12px;
+    }
+}
+@media  screen and (max-width:768px) {
+    /* .row{
+        justify-content: space-around;
+        width: 90vw;
+        flex-wrap: wrap;
+        gap: 30px;
+
+    } */
+    .card-effect1{
+        /* height: 26vmin;
+        width: 26vmin; */
+        font-size: 14px;
+    }
+}
+@media  screen and (max-width:480px) {
+    
+    .card-effect1{
+        
+        font-size: 8px; 
+    }
+}
+.testimoniall .container .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+.product .container .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: rgba(124, 159, 153, 0.589);
+}
+.testimonialll .card {
+  
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+    /* background-color: #FECD45 !important; */
+    
+}
+.card .face {
+    position: absolute;
+    color: #2568FB;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.06);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    border-top: 5px solid #2568FB;
+    border-left: 5px solid #2568FB;
+    border-radius: 25px;
+    /* border-right: 1px solid #999;
+border-bottom: 1px solid #999; */
+}
+
+.card .face.front-face,
+.card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #2568FB;
+}
+
+.card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .face.front-face .name {
+    letter-spacing: 2px;
+    color: #2568FB;
+    font-weight: 400;
+}
+
+.card .face.front-face .designation {
+    font-size: 0.8rem;
+    color: #2568FB;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+}
+
+.card:hover .face.front-face {
+    transform: rotateY(180deg);
+}
+
+.card .face.back-face {
+    position: absolute;
+    color: #FECD45;
+    background: rgba(255, 255, 255, 0.06);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+    background-color: black;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+}
+
+.card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+}
+
+.card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+}
+
+.card:hover .face.back-face {
+    transform: rotateY(360deg);
+}
+
+@media(max-width: 991.5px) {
+    .col-lg-4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+
+.heading{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: #2568FB;
+}
+section{
+  /* background-color:  #FECD45 !important;    */
+}
+
+
+/* .owl-next{
+    background-color: red !important;
+    color: red !important;
+} */
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #FCAC45!important;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px; 
+    }
+    .owl-theme-custom.owl-dots .owl-dot.active span, .owl-theme-custom .owl-dots .owl-dot:hover span {
+     background: #FCAC45!important;
+     }
+
+
+     ::ng-deep .owl-theme .owl-dots .owl-dot span {
+        /* background: red!important; dots color */
+      }
+     
+     ::ng-deep .owl-theme .owl-dots .owl-dot.active span,
+      .owl-theme .owl-dots .owl-dot:hover span {
+        background: #FCAC45!important; /*active and on hover color*/
+      }
+      /* .testimonialll{
+        position: relative;
+        z-index: 1;
+        background-color: white;
+      } */
+      .ratings{
+        margin-right:10px;
+    }
+    
+    .ratings i{
+        
+        color:#cecece;
+        font-size:32px;
+    }
+    
+    .rating-color{
+        color:#fbc634 !important;
+    }
+    
+    .review-count{
+        font-weight:400;
+        margin-bottom:2px;
+        font-size:24px !important;
+    }
+    
+    .small-ratings i{
+      color:#cecece;  
+       
+    }
+    
+    .review-stat{
+        font-weight:300;
+        font-size:18px;
+        margin-bottom:2px;
+    }
+    .fa-star{
+        font-size: 20px;
+    }

@@ -1,0 +1,57 @@
+
+
+
+
+
+
+a{
+    color:#2568FB ;
+    text-decoration: none;
+}
+
+a:hover{
+   color: #2568FB;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+
+
+section h6{
+    color:#FECD45;
+    text-decoration: wavy;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    
+}
+
+.pera, .sec a{
+    font-size: 14px;
+
+}
+.pera i{
+      color: #FECD45;
+}
+
+
+
+
+@media(max-width:768px){
+    .yellowline1{
+        width: 15% !important;
+        margin-left: 42%;
+    }
+    .yellowline2{
+        width: 30% !important;
+        margin-left: 35%; 
+    }
+    .yellowline3{
+        width: 30% !important;
+        margin-left: 35%; 
+    }
+    .yellowline4{
+        width: 18% !important;
+        margin-left: 41%; 
+    }
+}
+

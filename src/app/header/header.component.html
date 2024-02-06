@@ -1,0 +1,94 @@
+<div class="container-fluid d-none d-lg-block shadow-sm" style="background-color: #FECD45;  z-index: 1; position: relative; "  >
+    <div class="container p-0 d-flex justify-content-between align-items-center"  style="height: 70px;">
+      <div class="col-1 d-flex" style="cursor:pointer">
+        <img src="assets/images/header/mashrlogo.png" routerLink="/"  height="110px" width="180px" alt="">
+      </div>
+      <div class="col-xl-8 col-lg-9 col-md-9"   id="navbarSupportedContent">
+        <ul  class="d-flex justify-content-end gap-4 p-0 m-0 mt-1 "   id="nav-links">
+          <li  class="d-flex li mt-3" [ngStyle]="styleSix && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"><a routerLink="/home" ><span > Home</span></a>
+          </li> 
+         
+          
+        <!-- <li  class="d-flex li mt-3"  routerLink="/find-jobs"[ngStyle]="styleOne && {'border-bottom': '3px solid #2568FB'}" style="height: 48px;"><a  ><span > Find Job</span></a>
+        </li> -->
+        <!-- <li  class="d-flex li mt-3"   [ngStyle]="styleTwo && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"><a routerLink="/upload-resume" ><span class="" >Upload CV</span></a>
+        </li> -->
+        <li   class="d-flex li mt-3" [ngStyle]="styleThree && {'border-bottom': '3px solid #2568FB'}" style="height:48px;"><a routerLink="/employer" ><span > Order Now</span></a>
+        </li> 
+
+        <!-- <li   class="d-flex li mt-3" [ngStyle]="styleEight && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"><a routerLink="/alljobseekers" ><span > Job seekers</span></a>
+        </li> -->
+        <!-- <li   class="d-flex li mt-3" [ngStyle]="styleEmp && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"><a routerLink="/all-employers" ><span >Employers</span></a>
+        </li> -->
+
+        <li  class="d-flex li mt-3" [ngStyle]="styleSeven && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"><a routerLink="/about-us" ><span > About </span></a>
+        </li>
+        <li  class="d-flex li mt-3" [ngStyle]="styleFour && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"><a routerLink="/contact-us" ><span > Contact </span></a>
+        </li> 
+         
+        <li  *ngIf="!profile"  class="d-flex li mt-3"  [ngStyle]="styleFive && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"> <a class="d-flex" routerLink="/signin"> 
+          <span   class='material-icons me-1 '>perm_identity</span> <span class="">Login</span></a>
+        </li> 
+         
+        <li *ngIf="profile"  class="d-flex li mt-3  " [ngStyle]="styleFive && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"> <a class="d-flex" routerLink="/profile"> 
+          <span class='material-icons me-1'>perm_identity</span> <span class="">Profile</span></a>
+        </li>
+        <li *ngIf="profile"  class="d-flex li mt-3  " [ngStyle]="styleFive && {'border-bottom': '3px solid #2568FB'}" style="height:  48px;"> <a class="d-flex" (click)="logout()"> 
+          <span class='material-icons me-1' style="font-size:20px">logout</span> <span class="">Logout</span></a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+   
+   
+  <!-- Responsive NAvbar (Toggle) starts -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-lg-none p-0 shadow-sm" >
+  <div class="container-fluid" style="background-color: #FECD45;">
+    <img src="assets/images/header/mashrlogo.png" height="75px" width="95px" alt="">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mt-1" id="navbarNav">
+      <ul class="navbar-nav float-end  w-100 text-end">
+        <li class="nav-item d-flex justify-content-end" >
+           <a routerLink="/home" style="font-size: 16px;">Home</a>
+        </li>
+        <li class="nav-item d-flex justify-content-end" >
+           <a routerLink="/find-jobs" style="font-size: 16px;">Find Job</a>
+        </li>
+        <li class="nav-item d-flex justify-content-end">
+          <a routerLink="/upload-resume" style="font-size: 16px;">Upload CV</a>
+          
+        </li>
+        <li class="nav-item d-flex justify-content-end">
+          <a routerLink="/employer" style="font-size: 16px;" >Post Job </a>
+        </li>
+        <li class="nav-item d-flex justify-content-end">
+          <a routerLink="/alljobseekers" style="font-size: 16px;" >Job Seeker</a>
+        </li>
+    
+        <li class="nav-item d-flex justify-content-end">
+          <a routerLink="/all-employers" style="font-size: 16px;" >Employers</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/about-us" style="font-size: 16px;">About </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contact-us" style="font-size: 16px;">Contact </a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/SignUp" style="font-size: 16px;">Login</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Responsive Navbar (Toggle) ends -->

@@ -1,0 +1,300 @@
+.main_div {
+    min-height: 90.8vh !important;
+    background-color: #F2f2f2;
+    padding-top: 3%;
+    
+    
+  }
+
+  .search-2 {
+    position: relative;
+    width: 100%
+}
+
+.search-2 input {
+    height: 45px;
+    border: none;
+    width: 95%;
+	padding-left: 40px;
+    padding-top: 3px;
+    padding-right: 100px;
+	border-radius: 4px;
+}
+
+.search-2 input:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none
+}
+
+.search-2 i {
+    position: absolute;
+    top: 12px;
+    left: 4px;
+    font-size: 24px;
+    color: black
+}
+
+.search-2 button {
+    position: absolute;
+    right: 1px;
+    top: 0px;
+    border: none;
+    height: 45px;
+    background-color: #2568FB;
+    color: #fff;
+    width: 100px;
+    border-radius: 4px
+}
+.search-2 button i{
+    position: absolute;
+}
+  .cardSection{
+    margin: 2.5% 0px;
+  }
+
+
+
+
+
+
+
+  body{
+	font-family: arial;
+	/* background: lightpink; */
+}
+.logo{
+	border: 1px solid #f6f6f6;
+    margin-bottom: 0px;
+}
+
+.logo img{
+	width: 80px;
+	height: 80px;
+}
+.card{
+	display: block;
+	padding: 2vh 2vh 2vh 3vh;
+	border: none;
+	border-radius: 15px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	max-width: 330px;
+	min-width: 280px;
+	max-height: 230px;
+	cursor: pointer;
+	border-left: 3px solid transparent;	
+}
+.card:hover{
+	border-left: 3px solid #2568FB;
+	box-sizing: border-box;
+}
+.header{
+	margin-bottom: 3vh;
+	margin-right: 2vh;
+	float: right;
+	margin-left: auto;
+}
+
+.far{
+	color: rgba(15, 198, 239, 0.97)!important;
+	font-size: 16px!important;
+}
+p.heading{
+	font-weight: 500;
+	font-size: 16px;
+    margin-bottom: 0px;
+	color: #000;
+	text-align: start;
+}
+p.text-muted{
+	font-size: 12px;
+	font-weight: 300;
+	min-height: 40px;
+	color: #a1a7ae!important;
+}
+.btn-sm{
+	border-radius: 8px;
+}
+.fas.fa-users{
+	color: rgba(15, 198, 239, 0.97)!important;
+}
+.mutual span{
+	font-size: 14px;
+	color: #adb5bd;
+	font-weight: bold;
+}
+.btn-primary.btn-lg{
+    border-radius: 30px;
+    width: 90%;
+    border: none;
+    background: #2568FB;
+	display: flex;
+    justify-content: center;
+}
+.btn-dark.btn-lg{
+    border-radius: 30px;
+    width: 90%;
+    border: none;
+    background: #dee2e6;
+}
+.btn-dark span{
+	font-size: 14px;
+	text-align: center;
+	color: #0000008c;
+	font-weight: bold;
+}
+.btn-primary span{
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
+
+.jobdetails{
+	border: 1px solid #5e5e5e40;
+	margin: 4% 0px;
+	border-radius: 25px;
+	padding: 0px;
+	background-color:#fff;
+	height: max-content;
+	min-width:300px;
+
+}
+.head , .details{
+	border-bottom: 1px solid #5e5e5e40;
+	
+	padding: 5% 4%;
+}
+.head{
+	height: 180px;
+}
+
+.FullDescription, .lastSec{
+	padding: 5% 4%;
+}
+.head button{
+	margin-top: 10px;
+}
+
+.btnrow button{
+	font-size: 12px;
+}
+.btna {
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+			appearance: none;
+	background-color:  #2568FB;;
+	outline: 0;
+	border-radius: 0.6em;
+	color:#fff;
+	border: 2px solid transparent;
+	cursor: pointer;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-self: center;
+		-ms-flex-item-align: center;
+			align-self: center;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1;
+	padding: 10px 12px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+  }
+  .btna:hover {
+	color: #2568FB;
+	border: 2px solid #2568FB;
+	outline: 0;
+	font-size: 12px;
+  }
+  .firsta {
+	-webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  }
+  .firsta:hover {
+	box-shadow: 0 0 40px 40px #fff inset;
+  }
+
+  .jobdetails h3{
+	font-size: 16px;
+	font-weight: 400;
+
+  }
+  .jobdetails p{
+	font-size: 14px;
+  }
+
+
+
+
+  @media(max-width:768px){
+	.findJobsMain{
+		flex-flow: wrap-reverse;
+		padding: 0px 0px 0px 4% !important;
+	}
+	.jobdetails{
+		margin-top: 5%;
+	}
+	.cardSection{
+		padding: 0px 0px 0px 5% !important;
+	}
+	.card{
+		padding: 1vh 1vh 1vh 2vh;
+	}
+  }
+  .card{
+    display: block;
+    padding: 2vh 2vh 2vh 2vh;
+    border: none;
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 330px;
+    min-width: 280px;
+    max-height: 260px;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+}
+p.heading{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0px;
+    height: 48px;
+}
+.mutual span{
+    font-size: 12px;
+    color: #5c5c5ceb;
+    font-weight: bold;
+}
+
+  .btnrow{
+    display: flex;
+    justify-content: space-around !important;
+}
+
+@media(min-width:990px) and (max-width:1100px){
+	.container{
+		width: 50%;
+	}
+	.card{
+		padding: 1vh 1vh 1vh 1vh;
+		min-width: 275px;
+	}
+}
+h3{
+    font-family: 'Playfair Display' !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    line-height: 25px !important;
+    text-align: left !important;
+    color: #000 !important;
+    text-transform: capitalize;
+}

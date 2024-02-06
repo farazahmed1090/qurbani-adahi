@@ -1,0 +1,36 @@
+<!-- <app-particles></app-particles> -->
+
+<body>
+  <div class="container">
+    <form [formGroup]="acc_link_form">
+      <div class="">
+        <div class="d-flex justify-content-center "><a routerLink="/">
+            <img src="/assets/img/navbar_logo.jpg" width="80px" height="auto" alt=""></a></div>
+        <div class="d-flex justify-content-center mt-4" style="font-weight: 400; font-size:28px">
+          Reset Password</div>
+        <div class=" mt-5">
+          <div class="field col-xl-12 col-lg-6 col-md-12 col-sm-12 ">
+            <label>
+              <input type="text" formControlName="email" placeholder=" " />
+              <p [ngClass]="{'error': email?.invalid && email?.touched, 'fine': email?.valid&& email?.touched}">Email</p>
+            </label>
+            <span class="error" *ngIf="notExist">{{notExisting}}</span>
+          </div>
+        </div>
+       
+        <div class="last">
+          <p class=""><a routerLink="/signin" style= "color: #282871;"> Login</a></p>
+          <div class="button" (click)="checkEmail()">
+            <button type="submit" class="btn btn-primary w-20 ms-5"
+            style="background-color: #282871; border-color:#282871;">
+            Send Link</button>
+          </div>
+        </div>
+      </div>
+      
+      
+    </form>
+    
+    
+  </div>
+</body>

@@ -1,0 +1,73 @@
+
+     <head>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <!-- <app-particles></app-particles> -->
+    <body>
+     <div class="container col-sm-12 padding" style=" border-radius:5px;">
+    
+       <form [formGroup]="signup_form" (ngSubmit)="user_login(signup_form.value)">
+       <div class="">
+           <div class="d-flex justify-content-center "><a routerLink="/">
+            <img src="assets/images/navbar_logo.jpg" width="80px" height="auto" alt=""></a></div>
+           <div class="d-flex justify-content-center mt-4" style="font-weight: 400; font-size:28px">
+               Sign in to RBH</div>
+            <div class=" mt-5">
+               <div class="field col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                   <label>
+                     <input type="text" formControlName="email" placeholder=" "/>
+                     <p [ngClass]="{'error': email?.invalid, 'fine': email?.valid}" style="background-color: aliceblue;">Email</p>
+                   </label>
+                   <!-- <span class="error" *ngIf="email?.invalid && email?.touched">This is required
+                    field</span>
+                    <span class="error" *ngIf="email?.invalid && email?.touched">This is required
+                      field</span> -->
+                 </div>
+                 <div class="field col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                    <label>
+                      <input [type]=" showPassword ? 'text' : 'password' " formControlName="password" placeholder=" "/>
+                        <p [ngClass]="{'error':password?.invalid, 'fine' : password?.valid}" style="background-color: aliceblue;">Password</p>
+                      </label>
+                      <!-- <i alt="show" class="fa fa-eye eye-show"
+                        (click)="showPassword = !showPassword"
+                        [class.hide]="showPassword"></i>
+                        <i alt="hide" class="fa fa-eye-slash eye-hide"
+                        (click)="showPassword = !showPassword"
+                        [class.hide]="!showPassword"></i> -->
+                        
+                    
+                    <div class=" last">
+                      <p class="mt-2"><a routerLink="/access-link" style= "color: #282871;"> forget password?</a></p>
+                      <div class="button">
+                         <button type="submit" class="btn btn-primary w-20 "
+                         style="background-color: #282871; border-color:#282871;">
+                         Log in</button>
+                      </div>
+                   
+                  </div>
+                  </div>
+            </div>
+          
+    
+            <div class="text-center logo mt-3" >
+              <p>Not a member? <a routerLink="/register">Create account</a></p>
+              <p>or sign up with:</p>
+              <a href="https://www.facebook.com/" type="button" class="btn btn-link btn-floating mx-1">
+                <i class='bx bxl-facebook-circle' style="font-size: 40px;" ></i>
+              </a>
+    
+              <a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&ifkv=ARgdvAukbV3EhbG4uAXwG26T4mNHCI0dRBphUgX2S0axZB5KKcYyyFpdZjEIDVs7Y7bSPnZcGJnG_w&flowName=GlifWebSignIn&flowEntry=ServiceLogin" type="button" class="btn btn-link btn-floating mx-1">
+                <i class='bx bxl-google' style="font-size: 40px;"></i>
+              </a>
+    
+              <a href="https://github.com/login" type="button" class="btn btn-link btn-floating mx-1 ">
+                <i class='bx bxl-github' style="font-size: 40px;" ></i>
+              </a>
+            </div>
+       </div>
+          </form>
+         </div>
+    
+        </body>
+
+     

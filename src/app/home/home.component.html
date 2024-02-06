@@ -1,0 +1,257 @@
+<!-- <div *ngIf="loader" class="loader">
+    <div class="containerz">
+        <span>LOADING</span>
+        <span class="drop"></span>
+    </div>
+    
+    <svg>
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -20" result="gooey" />
+                <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
+</div> -->
+<body *ngIf="loader">
+    <div  id="loader">
+        <div id="shadow"></div>
+        <div id="box"></div>
+    </div>
+    <h4 class=""> Loading...</h4>
+</body>
+
+<div *ngIf="!loader">
+<app-header></app-header>
+
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<app-particle *ngIf="ng_particles" ></app-particle>
+
+    <section class="search-jobs ">
+        <div class="search-job ">
+            <div class="search-job-title">
+                <div class=" container ">
+                    <h1 class="search-title ">Find the <span style="text-transform:uppercase" class="tw"></span> fit</h1>
+                </div>
+                <form [formGroup]="serach_form" (ngSubmit)="onsubmit(this.serach_form.controls.search.value)">
+                <div class="container ">
+                    <div class="search">
+                        <div class="row">
+                           
+                            <div class="col-md-6">
+                                <div class="search-1"> <i class='bx bx-search-alt'></i> 
+                                    <input list="job-title" formControlName="search"  type="text" placeholder="Search Jobs, Keywords, companies">
+                                    <datalist id="job-title" >
+                                        <option *ngFor="let i of all_jobs" value="{{i.job_title}}">{{i.job_title}}</option>
+                                      </datalist>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <div class="search-2"> <i class='bx bxs-map'></i> <input list="city_name" type="text"
+                                            placeholder="Enter location or Remote">
+                                            <datalist id="city_name" >
+                                                <option *ngFor="let o of all_city" value="{{o.city_name}}">{{o.job_title}}</option>
+                                              </datalist>
+                                        <button type="submit" id="search_btn">Search</button>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mt-3 ">
+                    <button type="submit" class="search_btn">Search</button>
+                </div>
+            </form>
+
+            </div>
+            <!-- <div class="file-upload" >
+                <a class="me-1 circle-link mt-5" style="text-shadow: 1px blue;" routerLink="/upload-resume"><i class="bx bxs-megaphone me-1"></i>Upload Your Resume</a><span>- Get noticed
+                    by top employers!</span>
+            </div> -->
+            <div class="file-upload" >
+                <a class="me-1 circle-link" style="text-shadow: 1px blue;" routerLink="/upload-resume"><i class="bx bxs-megaphone me-1"></i>Upload Your Resume</a><span>- Get noticed
+                    by top employers!</span>
+            </div>
+           
+
+            <div class=" container popular-searchs   mt-5 mb-3">
+                <label for="" style="color:#fff;">Popular Searches</label>
+            </div>
+            <div class="container">
+                <a  class="p-search"><i class='bx bx-search'></i><span>Work From Home</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Part-time</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Administration</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Finance</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Retail</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>IT</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Engineering</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Sales</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Angular developer</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>PHP Developer</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Marketing Manager</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>React  Developer</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Full Stack Developer</span></a>
+                <a  class="p-search"><i class='bx bx-search'></i><span>Ui Designer</span></a>
+            </div>
+        </div>
+    </section>
+   
+    <!-- our service to companies -->
+    
+    <!-- services to APPLICANTS -->
+    <div class="body_div pb-4" >
+    <section id="testimonials" class="mb-5  py-5">
+        <div class="container ">
+            <div class="row" data-aos="fade-left" data-aos-duration="500">
+                <div class="col-md-8 mx-auto text-center">
+                    <h3 class="mb-5 mt-5">
+                        What we offer to Applicants!
+                    </h3>
+                </div>
+            </div>
+            <div class="row gy-5 gx-4 justify-content-center">
+                <div class="col-lg-4 col-sm-6  d-flex justify-content-center mb-1" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                    >
+                    <div routerLink="/find-jobs" class="testimonials card-effect" style="background-color: rgba(255, 255, 255, 1);">
+
+
+                        <div class="card-img4 mb-1"></div>
+                        <!-- <i class='bx bx-desktop'></i> -->
+
+                        <h5 class="mt-1">flexible working hours</h5>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 d-flex justify-content-center mb-1" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                    >
+                    <div routerLink="/find-jobs" class="testimonials card-effect">
+
+
+                        <div class="card-img5"></div>
+                        <!-- <i class='bx bx-desktop'></i> -->
+
+
+                        <h5 class="mt-2">Work from Your Location</h5>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 d-flex justify-content-center mb-1" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+                    >
+                    <div routerLink="/find-jobs" class="testimonials card-effect" style="background-color: rgba(232, 247, 252, 1);">
+
+                        <div class="card-img6"></div>
+                        <!-- <i class='bx bx-desktop'></i> -->
+
+
+                        <h5 class="mt-2">International Hiring</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features pt-5">
+        <div class="container">
+            <div class="row bg-light py-0">
+                <div class="col-lg-6 col-img" data-aos="fade-right" data-aos-duration="500">
+                    <!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe> -->
+                </div>
+                <div class="col-lg-6 video_detail">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 " data-aos="fade-right" data-aos-duration="500">
+                                <h3 class="d-flex justifyy-content-start">Who we are?</h3>
+                                <p class="mb-5 ">{{pro_name}} is a Singapore-based HR management startup connecting top
+                                    professionals with excellent companies across the globe; who are looking to hire
+                                    them for remote jobs with flexible hours for key positions.
+                                    We aim to serve your company’s needs by using the effective hiring tactics our team
+                                    has developed with their expertise in the field. We mix state-of-the-art technology
+                                    with a passion for serving people looking for growth in business or careers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonailss my-4 py-4">
+        <div class="container">
+            <div class="row title" data-aos="fade-left" data-aos-duration="500">
+                <div class="col-md-8 mx-auto text-center block">
+                    <h3 class="mb-5 mt-5">
+                        What we Offer to Employers!
+                    </h3>
+                </div>
+            </div>
+            <div class="row gy-5 gx-4 justify-content-center">
+                <div class=" col-lg-4 col-sm-6 d-flex justify-content-center mb-1" data-aos="fade-down-right" data-aos-duration="500"
+                    >
+                    <div routerLink="/employer" class="testimonials-1 card-effect-1 " style="background-color: rgba(255, 255, 255, 1);">
+
+
+                        <div class="card-img1"></div>
+                        <!-- <i class='bx bx-desktop'></i> -->
+
+                        <h5 class="">Best Solutions Providing Staff</h5>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 d-flex justify-content-center mb-1" data-aos="fade-down" data-aos-duration="500" >
+                    <div routerLink="/employer" class="testimonials-1 card-effect-1">
+
+
+                        <div class="card-img2"></div>
+                        <!-- <i class='bx bx-desktop'></i> -->
+
+
+                        <h5 class="mt-2">Meet Exceptional Professionals</h5>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 d-flex justify-content-center mb-1" data-aos="fade-down-right" data-aos-duration="500" >
+                    <div routerLink="/employer" class="testimonials-1 card-effect-1" style="background-color: rgba(232, 247, 252, 1);">
+
+                        <div class="card-img3"></div>
+                        <!-- <i class='bx bx-desktop'></i> -->
+
+
+                        <h5 class="mt-2">Hire Talent From Around the Globe</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- counter section -->
+    <div class=" my-4 py-4">
+
+        <app-featured-job-sec ></app-featured-job-sec>
+    </div>
+        <!-- counter section ends here -->
+
+    <!-- companies section -->
+    <div class=" my-4 py-4">
+<app-company-section></app-company-section>
+</div>
+<!-- companies section ends here -->
+<!-- testimonials -->
+<app-testimonials-section></app-testimonials-section>
+<!-- testimonial ends here -->
+</div>
+
+<app-footer></app-footer>
+</div>
+<app-quick-link *ngIf="quik_links"></app-quick-link>
